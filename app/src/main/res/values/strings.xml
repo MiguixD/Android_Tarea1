@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Tarea1</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="loginUser">Usuario</string>
+    <string name="loginPassword">Contraseña</string>
+    <string name="login">Iniciar Sesión</string>
+    <string name="loginGoogle">Iniciar Sesión en Google</string>
+    <string name="loginCreateAccount">¿No tienes cuenta? Crear una</string>
+</resources>
