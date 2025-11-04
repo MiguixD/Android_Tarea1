@@ -2,7 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
             android:id="@+id/nav_graph"
-            app:startDestination="@id/registerFragment">
+            app:startDestination="@id/loginFragment">
 
     <activity
             android:id="@+id/main"
@@ -16,6 +16,9 @@
             android:name="com.example.tarea1.fragments.LoginFragment"
             android:label="Login"
             app:layout="@layout/fragment_login">
+        <action
+                android:id="@+id/actionLoginToRegister"
+                app:destination="@id/registerFragment"/>
     </fragment>
 
     <fragment

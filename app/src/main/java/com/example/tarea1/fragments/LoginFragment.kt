@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.core.widget.addTextChangedListener
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.example.tarea1.R
 import com.example.tarea1.databinding.FragmentLoginBinding
 import com.example.tarea1.viewmodels.LoginViewModel
@@ -66,6 +67,10 @@ class LoginFragment : Fragment() {
                 snackbar.dismiss()
             }
             snackbar.show()
+        }
+
+        binding.textViewLoginCreateAccount.setOnClickListener {
+            findNavController().navigate(R.id.actionLoginToRegister)
         }
     }
 }

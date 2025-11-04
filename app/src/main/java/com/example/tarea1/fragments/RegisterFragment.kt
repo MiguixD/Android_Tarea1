@@ -1,5 +1,6 @@
 package com.example.tarea1.fragments
 
+import android.app.DatePickerDialog
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -10,6 +11,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.tarea1.databinding.FragmentRegisterBinding
 import com.example.tarea1.viewmodels.RegisterViewModel
+import java.util.Calendar
 
 
 class RegisterFragment : Fragment() {
@@ -50,6 +52,22 @@ class RegisterFragment : Fragment() {
 
         binding.textInputEditTextRegisterConfirmPassword.addTextChangedListener {
             viewModel.onConfirmPasswordTextChanged(it.toString())
+        }
+
+        binding.textInputEditTextRegisterBirthdate.setOnClickListener {
+            val cal = Calendar.getInstance()
+
+            val dateSetListener = DatePickerDialog.OnDateSetListener { _, year, monthOfYear, dayOfMonth ->
+                cal.set(Calendar.YEAR, year)
+                cal.set(Calendar.MONTH, monthOfYear)
+                cal.set(Calendar.DAY_OF_MONTH, dayOfMonth)
+                binding.textInputEditTextRegisterBirthdate.setText("${cal.get(Calendar.DAY_OF_MONTH)}" +
+                        "/${cal.get(Calendar.MONTH)}" +
+                        "/${cal.get(Calendar.YEAR)}")
+            }
+            DatePickerDialog(requireContext(),
+                dateSetListener,
+                cal.get(Calendar.YEAR), cal.get(Calendar.MONTH), cal.get(Calendar.DAY_OF_MONTH)).show()
         }
     }
 }
