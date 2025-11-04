@@ -6,4 +6,11 @@
     <string name="login">Iniciar Sesión</string>
     <string name="loginGoogle">Iniciar Sesión en Google</string>
     <string name="loginCreateAccount">¿No tienes cuenta? Crear una</string>
+    <string name="loginSuccessful">Login Correcto</string>
+    <string name="loginUnsuccessful">Login Incorrecto</string>
+    <string name="functionalityNotImplemented">Funcionalidad no implementada aún</string>
+    <string name="close">CERRAR</string>
+    <string name="registerConfirmPassword">Confirmar contraseña</string>
+    <string name="registerBirthdate">Fecha de nacimiento</string>
+    <string name="registerCreateAccount">Crear cuenta</string>
 </resources>

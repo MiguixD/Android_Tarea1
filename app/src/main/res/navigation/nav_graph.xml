@@ -2,14 +2,27 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
             android:id="@+id/nav_graph"
-            app:startDestination="@id/loginFragment">
+            app:startDestination="@id/registerFragment">
+
+    <activity
+            android:id="@+id/main"
+            android:name="com.example.tarea1.MainActivity"
+            android:label="Main"
+            app:layout="@layout/activity_main">
+    </activity>
 
     <fragment
             android:id="@+id/loginFragment"
             android:name="com.example.tarea1.fragments.LoginFragment"
             android:label="Login"
             app:layout="@layout/fragment_login">
+    </fragment>
 
+    <fragment
+            android:id="@+id/registerFragment"
+            android:name="com.example.tarea1.fragments.RegisterFragment"
+            android:label="Register"
+            app:layout="@layout/fragment_register">
     </fragment>
 
 </navigation>
