@@ -27,7 +27,7 @@ class RegisterViewModel: ViewModel() {
     }
 
     fun onConfirmPasswordTextChanged(value: String){
-        _inputPasswordText.value = value
+        _inputConfirmPasswordText.value = value
         _isButtonEnabled.value = validateInput()
     }
 

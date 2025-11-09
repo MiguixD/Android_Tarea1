@@ -13,4 +13,5 @@
     <string name="registerConfirmPassword">Confirmar contraseña</string>
     <string name="registerBirthdate">Fecha de nacimiento</string>
     <string name="registerCreateAccount">Crear cuenta</string>
+    <string name="errorNotMatchingPasswords">Las contraseñas no coinciden</string>
 </resources>

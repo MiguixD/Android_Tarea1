@@ -9,6 +9,8 @@ import android.view.ViewGroup
 import androidx.core.widget.addTextChangedListener
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
+import com.example.tarea1.R
 import com.example.tarea1.databinding.FragmentRegisterBinding
 import com.example.tarea1.viewmodels.RegisterViewModel
 import java.util.Calendar
@@ -68,6 +70,15 @@ class RegisterFragment : Fragment() {
             DatePickerDialog(requireContext(),
                 dateSetListener,
                 cal.get(Calendar.YEAR), cal.get(Calendar.MONTH), cal.get(Calendar.DAY_OF_MONTH)).show()
+        }
+
+        binding.buttonRegister.setOnClickListener {
+            if(viewModel.validateRegister()) {
+                findNavController().navigate(R.id.actionRegisterToLogin)
+            } else {
+                binding.textInputLayoutRegisterPassword.error = getString(R.string.errorNotMatchingPasswords)
+                binding.textInputLayoutRegisterConfirmPassword.error = getString(R.string.errorNotMatchingPasswords)
+            }
         }
     }
 }
