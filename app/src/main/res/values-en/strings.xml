@@ -15,5 +15,6 @@
     <string name="registerBirthdate">Birthdate</string>
     <string name="registerCreateAccount">Create account</string>
     <string name="errorNotMatchingPasswords">Passwords don\'t match</string>
+    <string name="favourite">favourite</string>
 </resources>
 

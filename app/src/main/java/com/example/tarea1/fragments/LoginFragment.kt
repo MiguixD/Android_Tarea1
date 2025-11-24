@@ -53,8 +53,7 @@ class LoginFragment : Fragment() {
 
         binding.buttonLogin.setOnClickListener {
             if(viewModel.validateLogin()) {
-                val snackbar = Snackbar.make(binding.root, R.string.loginSuccessful, Snackbar.LENGTH_SHORT)
-                snackbar.show()
+                findNavController().navigate(R.id.actionLoginToList)
             } else {
                 val snackbar = Snackbar.make(binding.root, R.string.loginUnsuccessful, Snackbar.LENGTH_SHORT)
                 snackbar.show()

@@ -19,6 +19,10 @@
         <action
                 android:id="@+id/actionLoginToRegister"
                 app:destination="@id/registerFragment"/>
+        <action
+                android:id="@+id/actionLoginToList"
+                app:destination="@+id/listFragment"
+        />
     </fragment>
 
     <fragment
@@ -29,6 +33,14 @@
         <action
                 android:id="@+id/actionRegisterToLogin"
                 app:destination="@id/loginFragment"/>
+    </fragment>
+
+    <fragment
+            android:id="@+id/listFragment"
+            android:name="com.example.tarea1.fragments.ListFragment"
+            android:label="List"
+            app:layout="@layout/fragment_list">
+
     </fragment>
 
 </navigation>
