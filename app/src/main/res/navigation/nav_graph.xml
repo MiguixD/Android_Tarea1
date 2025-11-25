@@ -23,6 +23,10 @@
                 android:id="@+id/actionLoginToList"
                 app:destination="@+id/listFragment"
         />
+        <action
+                android:id="@+id/actionLoginToTab"
+                app:destination="@+id/tabFragment"
+        />
     </fragment>
 
     <fragment
@@ -40,6 +44,22 @@
             android:name="com.example.tarea1.fragments.ListFragment"
             android:label="List"
             app:layout="@layout/fragment_list">
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/favFragment"
+            android:name="com.example.tarea1.fragments.FavFragment"
+            android:label="Fav"
+            app:layout="@layout/fragment_fav">
+
+    </fragment>
+
+    <fragment
+            android:id="@+id/tabFragment"
+            android:name="com.example.tarea1.fragments.TabFragment"
+            android:label="Tab"
+            app:layout="@layout/fragment_tab">
 
     </fragment>
 

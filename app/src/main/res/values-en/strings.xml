@@ -16,5 +16,7 @@
     <string name="registerCreateAccount">Create account</string>
     <string name="errorNotMatchingPasswords">Passwords don\'t match</string>
     <string name="favourite">favourite</string>
+    <string name="listTab">List</string>
+    <string name="favTab">Favourites</string>
 </resources>
 

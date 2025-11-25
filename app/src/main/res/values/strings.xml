@@ -15,4 +15,6 @@
     <string name="registerCreateAccount">Crear cuenta</string>
     <string name="errorNotMatchingPasswords">Las contraseñas no coinciden</string>
     <string name="favourite">favorito</string>
+    <string name="listTab">Lista</string>
+    <string name="favTab">Favoritos</string>
 </resources>
