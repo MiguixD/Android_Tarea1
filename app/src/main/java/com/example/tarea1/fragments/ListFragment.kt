@@ -1,5 +1,7 @@
 package com.example.tarea1.fragments
 
+import android.media.AudioAttributes
+import android.media.SoundPool
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -17,10 +19,23 @@ import com.example.tarea1.viewmodels.ListViewModel
 class ListFragment : Fragment() {
 
     private lateinit var binding: FragmentListBinding
+    private lateinit var soundPool: SoundPool
+    private var soundId: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        val audioAttributes = AudioAttributes.Builder()
+            .setUsage(AudioAttributes.USAGE_GAME)
+            .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
+            .build()
+
+        soundPool = SoundPool.Builder()
+            .setMaxStreams(5)
+            .setAudioAttributes(audioAttributes)
+            .build()
+
+        soundId = soundPool.load(requireContext(), R.raw.click, 1)
     }
 
     override fun onCreateView(
@@ -38,7 +53,7 @@ class ListFragment : Fragment() {
 
         binding.listRecyclerView.layoutManager = LinearLayoutManager(context)
 
-        val adapter = AnimeAdapter(requireContext()) { anime ->
+        val adapter = AnimeAdapter(requireContext(), soundPool, soundId) { anime ->
             viewModel.toggleFavourite(anime)
         }
         binding.listRecyclerView.adapter = adapter

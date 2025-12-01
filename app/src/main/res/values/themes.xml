@@ -6,4 +6,12 @@
     </style>
 
     <style name="Theme.Tarea1" parent="Base.Theme.Tarea1"/>
+
+    <style name="Theme.Tarea1.MySplash" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowSplashScreenBackground">@color/white</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/myanimelist_logo</item>
+        <item name="android:windowSplashScreenIconBackgroundColor">@color/white</item>
+        <item name="android:windowSplashScreenAnimationDuration">2000</item>
+        <item name="postSplashScreenTheme">@style/Theme.Tarea1</item>
+    </style>
 </resources>
