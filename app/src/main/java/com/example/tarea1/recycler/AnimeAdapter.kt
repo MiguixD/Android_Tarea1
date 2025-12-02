@@ -36,6 +36,7 @@ class AnimeAdapter(val context: Context,
     class AnimeViewHolder(val binding: ItemLayoutBinding) : RecyclerView.ViewHolder(binding.root){
 
         fun bind(item: Anime, soundPool: SoundPool, soundId: Int, onFavouriteClick: ((Anime) -> Unit)? = null){
+            binding.position.text = bindingAdapterPosition.toString()
             binding.title.text = item.title
             binding.description.text = item.description
             binding.imageView.setImageResource(item.image)

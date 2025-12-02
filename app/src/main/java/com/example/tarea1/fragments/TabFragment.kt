@@ -36,6 +36,7 @@ class TabFragment : Fragment() {
             tab.text = when (position) {
                 0 -> getString(R.string.listTab)
                 1 -> getString(R.string.favTab)
+                2 -> "Register"
                 else -> ""
             }
         }.attach()

@@ -71,7 +71,9 @@ class ListViewModel(): ViewModel() {
     fun toggleFavourite(anime: Anime) {
         anime.favourite = !anime.favourite
 
-        val updatedList = list.map {
+        val currentList = _animeList.value ?: emptyList()
+
+        val updatedList = currentList.map {
             if (it.title == anime.title) it.copy(favourite = anime.favourite) else it
         }
 

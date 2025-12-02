@@ -61,11 +61,12 @@ class LoginFragment : Fragment() {
         }
 
         binding.buttonLoginGoogle.setOnClickListener {
-            val snackbar = Snackbar.make(binding.root, R.string.functionalityNotImplemented, Snackbar.LENGTH_INDEFINITE)
-            snackbar.setAction(R.string.close) {
-                snackbar.dismiss()
-            }
-            snackbar.show()
+//            val snackbar = Snackbar.make(binding.root, R.string.functionalityNotImplemented, Snackbar.LENGTH_INDEFINITE)
+//            snackbar.setAction(R.string.close) {
+//                snackbar.dismiss()
+//            }
+//            snackbar.show()
+            findNavController().navigate(R.id.actionLoginToList)
         }
 
         binding.textViewLoginCreateAccount.setOnClickListener {
