@@ -45,14 +45,16 @@ class AnimeAdapter(val context: Context,
             )
 
             binding.fav.setOnClickListener {
-                soundPool.play(
-                    soundId,
-                    1f,
-                    1f,
-                    0,
-                    0,
-                    1f
-                )
+                if(onFavouriteClick != null) {
+                    soundPool.play(
+                        soundId,
+                        1f,
+                        1f,
+                        0,
+                        0,
+                        1f
+                    )
+                }
                 onFavouriteClick?.invoke(item)
             }
         }
